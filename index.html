@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menedżer zadań</title>
+</head>
+<body>
+    <header>
+        <h1>Menedżer zadań</h1>
+    </header>
+    <main>
+        <section>
+            <div>
+                <input id="task" type="text" placeholder="Wpisz zadanie">
+                <button id onclick="addTaskF()">Dodaj</button>
+            </div>
+            <div>
+               <select id="filter" onchange="renderTask()">
+                    <option value="wszystkie" selected> Wszystkie</option>
+                    <option value="Nowe">Nowe</option>
+                    <option value="Trwające">Trwające</option>
+                    <option value="Zakończone">Zakończone</option>
+                </select> 
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Zadanie</th>
+                            <th>Status</th>
+                            <th>Akcje</th>
+                        </tr>
+                    <tbody id="taskTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+<script src="tasks.js"></script>   
+<script src="apps.js"></script>
+</body>
+</html>
